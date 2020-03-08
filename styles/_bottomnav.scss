@@ -1,0 +1,43 @@
+@import "./variables/variables";
+@import "./mixins";
+
+footer {
+  background: $color--footer;
+  min-height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: linear 500ms;
+
+  @media (min-width: 700px) {
+    min-height: 250px;
+  }
+}
+
+.bottom-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: linear 500ms;
+
+  &__logo {
+    @include logo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+
+    @media (min-width: 700px) {
+      margin-bottom: 40px;
+    }
+  }
+  &__menu {
+    display: flex;
+    flex-flow: row;
+    list-style: none;
+  }
+  &__link {
+    @include link;
+  }
+}

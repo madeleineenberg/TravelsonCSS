@@ -1,0 +1,41 @@
+/* NAV TOP */
+
+@import "./variables/variables";
+@import "mixins";
+
+.top-nav {
+  display: flex;
+  flex-direction: column;
+  background: $color--main-background;
+  align-items: center;
+  padding: 10px;
+  transition: ease 1s;
+
+  @media (min-width: 700px) {
+    flex-direction: row;
+    padding: 0px;
+  }
+
+  &__logo {
+    @include logo;
+    margin-bottom: 15px;
+    margin-right: 0;
+    transition: ease 1s;
+
+    @media (min-width: 700px) {
+      margin-right: auto;
+      margin-top: 10px;
+      margin-left: 40px;
+    }
+  }
+  &__menu {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    justify-content: space-around;
+    list-style: none;
+  }
+  &__link {
+    @include link;
+  }
+}

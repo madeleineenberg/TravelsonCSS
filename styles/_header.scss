@@ -1,0 +1,64 @@
+/* HEADER - TOP IMAGE + TEXT */
+@import "./variables/variables";
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  background-image: radial-gradient(circle at 50% 0, #39495191, #0c202a7c 74%),
+    url("./images/header/philipp-kammerer-6-mxb-m-z-q-8-e-unsplash.png");
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 490px;
+  justify-content: center;
+  align-items: center;
+  transition: linear 800ms;
+
+  @media (min-width: 700px) {
+    min-height: 780px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 100px;
+    padding-top: 160px;
+  }
+  &__h1 {
+    font-size: 27px;
+    color: $color--headline-1;
+    transition: linear 800ms;
+
+    @media (min-width: 700px) {
+      font-size: 36px;
+    }
+
+    @media (min-width: 1000px) {
+      font-size: 52px;
+    }
+  }
+
+  &__text {
+    max-width: 80%;
+    text-align: center;
+    transition: linear 800ms;
+
+    @media (min-width: 700px) {
+      max-width: 80%;
+    }
+
+    @media (min-width: 1000px) {
+      max-width: 40%;
+    }
+  }
+  &__paragraph {
+    font-size: 16px;
+    font-weight: bold;
+    color: $color--paragraph-1;
+    transition: ease-in 1s;
+
+    @media (min-width: 700px) {
+      font-size: 17px;
+    }
+  }
+}
